@@ -1,0 +1,47 @@
+{
+  "name": "clipboard-app",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A premium Linux clipboard manager with history and pinning",
+  "author": "itscholar <itscholar@example.com>",
+  "homepage": "https://github.com/itscholar/clipboard-app",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && electron-builder",
+    "preview": "vite preview",
+    "electron:dev": "electron ."
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "date-fns": "^3.6.0",
+    "express": "^5.2.1",
+    "lucide-react": "^0.378.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "electron": "^30.0.1",
+    "electron-builder": "^24.13.3",
+    "vite": "^5.2.11",
+    "vite-plugin-electron": "^0.28.6",
+    "vite-plugin-electron-renderer": "^0.14.5"
+  },
+  "build": {
+    "appId": "com.itscholar.clipboard",
+    "productName": "Clipboard",
+    "directories": {
+      "output": "dist_linux"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility",
+      "maintainer": "itscholar <itscholar@example.com>"
+    }
+  }
+}
