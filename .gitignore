@@ -1,1 +1,31 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Production Builds
+dist/
+dist-electron/
+dist_linux/
+
+# Environment and Logs
+.env
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDE Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# User Data (Private Clipboard History)
+clipboard_history.json
+history.json
+
+# Vite
+.vite/
