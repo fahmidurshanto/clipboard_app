@@ -43,7 +43,6 @@ class Storage {
   }
 
   getHistory() {
-    console.log(`📥 [STORAGE] Providing ${this.history.length} items to UI.`);
     return this.history;
   }
 
@@ -56,7 +55,7 @@ class Storage {
     }
 
     const newItem = {
-      id: Date.now().toString(),
+      id: Date.now().toString() + '-' + Math.random().toString(36).substr(2, 9),
       type: type || 'text',
       content,
       timestamp: Date.now(),

@@ -12,7 +12,9 @@ const App = () => {
 
   const loadData = async () => {
     try {
-      const response = await fetch(`${API_BASE}/history`);
+      const response = await fetch(`${API_BASE}/history?t=${Date.now()}`, {
+        cache: 'no-store'
+      });
       const data = await response.json();
       setItems(data || []);
     } catch (err) {

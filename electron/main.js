@@ -62,6 +62,12 @@ app.whenReady().then(() => {
   setupTray(mainWindow);
   startWatcher();
 
+  // Auto-start on computer boot
+  app.setLoginItemSettings({
+    openAtLogin: true,
+    path: app.getPath('exe')
+  });
+
   const shortcuts = ['Shift+Meta+V', 'Meta+Shift+V', 'Super+Shift+V', 'Alt+V'];
   let registeredShortcut = null;
 
